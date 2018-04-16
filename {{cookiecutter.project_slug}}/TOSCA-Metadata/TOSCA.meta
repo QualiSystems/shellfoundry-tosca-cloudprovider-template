@@ -1,0 +1,4 @@
+TOSCA-Meta-File-Version: 1.0
+CSAR-Version: {{ cookiecutter.version }}
+Created-By: {{ cookiecutter.full_name }}
+Entry-Definitions: shell-definition.yaml
