@@ -15,6 +15,19 @@ imports:
 node_types:
  vendor.resource.{{cookiecutter.model_name}}:
     derived_from: cloudshell.nodes.{{ cookiecutter.family_name }}
+    capabilities:
+      auto_discovery_capability:
+        type: cloudshell.capabilities.AutoDiscovery
+        properties:        
+          enable_auto_discovery:
+            type: boolean
+            default: true
+          auto_discovery_description:
+            type: string
+            default: Describe the auto discovery
+          inventory_description:
+            type: string
+            default: Describe the resource shell template
     artifacts:
       icon:
         file: shell-icon.png
