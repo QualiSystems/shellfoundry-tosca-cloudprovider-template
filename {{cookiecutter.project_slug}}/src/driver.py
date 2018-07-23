@@ -1,4 +1,5 @@
 from cloudshell.cp.core import DriverRequestParser
+from cloudshell.shell.core.resource_driver_interface import ResourceDriverInterface
 from cloudshell.cp.core.models import DriverResponse
 from cloudshell.shell.core.driver_context import InitCommandContext, AutoLoadCommandContext, ResourceCommandContext, \
     AutoLoadAttribute, AutoLoadDetails, CancellationContext, ResourceRemoteCommandContext
