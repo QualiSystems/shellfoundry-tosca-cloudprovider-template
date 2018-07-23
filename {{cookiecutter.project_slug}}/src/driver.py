@@ -82,6 +82,9 @@ class {{cookiecutter.driver_name}} (ResourceDriverInterface):
         """
         pass
 
+    def PowerCycle(self, context, ports, delay):
+        pass
+
     def DeleteInstance(self, context, ports):
         """
         Will delete the compute resource
