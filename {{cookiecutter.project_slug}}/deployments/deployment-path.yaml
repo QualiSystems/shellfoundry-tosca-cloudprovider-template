@@ -16,6 +16,14 @@ node_types:
 
   vendor.resource.MyDeploymentPath:
     derived_from: cloudshell.nodes.CustomDeploymentOption
+
+#    ## custom attributes example for deployment option
+#    properties:
+#        Image Id:
+#            type: string
+#            description: The id of the image to be used for deploying the app
+#            default: ''
+
     artifacts:
       icon:
         file: shell-icon.png
