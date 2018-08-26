@@ -16,6 +16,10 @@ node_types:
  vendor.resource.{{cookiecutter.model_name}}:
     derived_from: cloudshell.nodes.{{ cookiecutter.family_name }}
     capabilities:
+    
+      concurrent_command_capability:
+        type: cloudshell.capabilities.SupportConcurrentCommands
+        
       auto_discovery_capability:
         type: cloudshell.capabilities.AutoDiscovery
         properties:        
