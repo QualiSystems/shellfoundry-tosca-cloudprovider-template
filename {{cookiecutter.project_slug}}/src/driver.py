@@ -41,7 +41,7 @@ class {{cookiecutter.driver_name}} (ResourceDriverInterface):
 
     # <editor-fold desc="Mandatory Commands">
 
-    def Deploy(self, context, request=None, cancellation_context=None):
+    def Deploy(self, context, request, cancellation_context=None):
         """
         Deploy
         :param ResourceCommandContext context:
@@ -61,7 +61,7 @@ class {{cookiecutter.driver_name}} (ResourceDriverInterface):
         # if we have multiple supported deployment options use the 'deploymentPath' property 
         # to decide which deployment option to use. 
         deployment_name = deploy_action.actionParams.deployment.deploymentPath
-        
+                
         deploy_result = _my_deploy_method(context, actions, cancellation_context)
         return DriverResponse(deploy_result).to_driver_response_json()
         '''
