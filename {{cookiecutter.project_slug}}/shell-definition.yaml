@@ -16,6 +16,10 @@ node_types:
  vendor.resource.{{cookiecutter.display_name}}:
     derived_from: cloudshell.nodes.{{ cookiecutter.family_name }}
     capabilities:
+    
+      concurrent_command_capability:
+        type: cloudshell.capabilities.SupportConcurrentCommands
+        
       auto_discovery_capability:
         type: cloudshell.capabilities.AutoDiscovery
         properties:        
@@ -28,6 +32,36 @@ node_types:
           inventory_description:
             type: string
             default: Describe the resource shell template
+          hide_address:
+            type: string
+            default: false
+
+#          ## Attributes available from the cloud provider standard
+#          Region:
+#            type: string
+#            default: ''
+#          Networks in use:
+#            type: string
+#            default: ''
+#          VLAN Type:
+#            type: string
+#            default: 'VLAN'
+#          Networking type:
+#            type: string
+#            default: 'L2'
+#
+#          ## Adding custom attributes to the cloud provider discovery form
+#          my_custom_attribute:
+#            type: string
+#            default:
+
+#    ## Custom attributes definition
+#    properties:
+#      my_custom_attribute:
+#        type: string
+#        default:
+#        description: attribute description
+
     artifacts:
       icon:
         file: shell-icon.png
@@ -40,4 +74,3 @@ node_types:
         type: tosca.artifacts.File
 
 
-     
